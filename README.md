@@ -19,6 +19,7 @@ Pewlett Hackard needs to do employee data analysis to understand how many people
 **Which titles or positions would have the highest number of people retiring and what should be the focus area for future recruitment for Pewlett Hackard?**
 
 The counts of people retiring based on the titles is as follows:
+
 ![Count of Titles](/Images/CountOfRetiringTitles.png)
 
 The focus should be more on hiring engineers and staff at both junior and senior levels. The least number of people retiring belong to the manager group.
@@ -26,6 +27,7 @@ The focus should be more on hiring engineers and staff at both junior and senior
 **How many employees are eligible for a mentorship program?**
 
 A snapshot of the dataset for employees eligible for mentorship program are as follows:
+
 ![WeeklyTotals](/Images/MentorshipEligibility.png)
 
 A count from the above dataset would help in planning ahead for the mentorship program.
@@ -33,13 +35,17 @@ A count from the above dataset would help in planning ahead for the mentorship p
 ## Employee Data Analysis Summary
 
 **How many roles will need to be filled as the "silver tsunami" begins to make an impact?**
+
 A total of roles to be filled can be found from unique_titles.csv dataset by using the following query:
+
 select count(emp_no) from unique_titles;
 
 The above query gives a count of 90398 roles!
 
 **Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?**
+
 The following query gives a count of total number of employees who are eligible to mentor the next generation employees:
+
 select count(*) from mentorship_eligibilty;
 
 The above query gives a count of 1549 which is definitely not enough to mentor 90,000 plus people who need to be recruited. Hence the future recruitment must be planned well ahead in time and in staggered groups so that there is enough bandwidth to mentor the incoming employees. 
